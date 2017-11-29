@@ -1,0 +1,3 @@
+[submodule "magenta/models/SeqGAN"]
+	path = magenta/models/SeqGAN
+	url = https://github.com/LantaoYu/SeqGAN
