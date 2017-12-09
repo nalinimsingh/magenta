@@ -201,6 +201,8 @@ def build_graph(mode, config, sequence_example_file_paths=None):
       for var_name, var_value in six.iteritems(vars_to_summarize):
         tf.summary.scalar(var_name, var_value)
         tf.add_to_collection(var_name, var_value)
+      tf.summary.tensor_summary('outputs',outputs)
+      tf.add_to_collection('outputs',outputs)
 
     elif mode == 'generate':
       temperature = tf.placeholder(tf.float32, [])
